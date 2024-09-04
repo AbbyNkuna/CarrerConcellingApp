@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:elevation="5dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:lottie_fileName="bulding.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        />
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="1dp"
+                    tools:ignore="Suspicious0dp" />
+
+                <TextView
+                    android:id="@+id/Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Tswhane University Of Technology"
+                    android:textColor="#000"></TextView>
+                <LinearLayout
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="1dp" />
+
+                <TextView
+                    android:id="@+id/Req"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="">
+
+                </TextView>
+                <LinearLayout
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="1dp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:id="@+id/Delete"
+        android:visibility="gone"
+        android:text="Delete University"
+        android:background="@drawable/button"
+        android:layout_height="wrap_content"></Button>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

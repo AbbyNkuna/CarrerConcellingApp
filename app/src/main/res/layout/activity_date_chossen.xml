@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DateChossen">
+    <LinearLayout
+        android:id="@+id/lay"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/btnback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_margin="10dp"
+                    android:background="#00FFFFFF"
+                    android:src="@drawable/ic_home_black_24dp"
+                    android:layout_width="40dp"
+                    android:tint="#000"
+                    android:layout_height="40dp">
+                </ImageButton>
+
+                <TextView
+                    android:text="Select Consultation Day and Time"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_below="@id/lay"
+        android:layout_above="@id/lay2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:background="@color/coloLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="2dp"
+                tools:ignore="Suspicious0dp" />
+            <TextView
+                android:text="Consultation Date"
+                android:gravity="center"
+                android:textColor="#000"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:background="@color/coloLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="2dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <DatePicker
+                    android:id="@+id/Date"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1.5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <LinearLayout
+                    android:background="@color/coloLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="2dp"
+                    tools:ignore="Suspicious0dp" />
+                <TextView
+                    android:text="Consultation Time"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:background="@color/coloLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="2dp" />
+                <TimePicker
+                    android:headerBackground="@color/colorPrimaryDark"
+                    android:id="@+id/Time"
+                    android:timePickerMode="clock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TimePicker>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:id="@id/lay2"
+
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+       <Button
+           android:id="@+id/Submit"
+           android:text="Submit Details"
+           android:layout_margin="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+       </Button>
+    </LinearLayout>
+</RelativeLayout>
